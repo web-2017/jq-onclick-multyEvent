@@ -1,9 +1,10 @@
 $(function () {
-  var link = $('.menu ul li > a');
+  var link = $('.menu ul li > a'); //all elements a
 
   link.on('click', function(e){
     e.preventDefault();
 
+    //e.target проверяет и сравнивает события клика на соответсвие нажатой кнопки
     if($(e.target).is('#about')){
       $('html,body').stop().animate({ scrollTop: $('.section2').offset().top }, 1000);
     }
